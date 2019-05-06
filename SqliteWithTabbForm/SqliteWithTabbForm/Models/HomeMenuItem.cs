@@ -6,8 +6,7 @@ namespace SqliteWithTabbForm.Models
 {
     public enum MenuItemType
     {
-        Browse,
-        About
+        Browse
     }
     public class HomeMenuItem
     {

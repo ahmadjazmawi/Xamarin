@@ -1,0 +1,31 @@
+﻿using SqliteWithTabbForm.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace SqliteWithTabbForm.Views
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TabbedItemDetailPage : TabbedPage
+    {
+        ItemDetailViewModel viewModel;
+
+        public TabbedItemDetailPage(ItemDetailViewModel viewModel)
+        {
+            InitializeComponent();
+
+            Children.Add(new ItemDetailPage(viewModel));
+            Children.Add(new ItemInterestPage(viewModel));
+        }
+
+        public TabbedItemDetailPage()
+        {
+            InitializeComponent();
+        }
+    }
+}

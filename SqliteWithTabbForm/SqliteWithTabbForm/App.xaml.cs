@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using SqliteWithTabbForm.Services;
 using SqliteWithTabbForm.Views;
 
 namespace SqliteWithTabbForm
@@ -13,7 +12,6 @@ namespace SqliteWithTabbForm
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
         }
 
